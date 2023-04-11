@@ -252,7 +252,7 @@
                 // send email using EmailJS
                 emailjs.sendForm('service_pqzz7y4', 'contact_form', this)
                     .then(function() {
-                        console.log('SUCCESS!');
+                        alert('Your message has been sent!');
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
