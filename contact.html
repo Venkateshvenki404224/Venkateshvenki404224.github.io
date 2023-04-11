@@ -244,7 +244,12 @@
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
+                // retrieve form field values and assign them to variables
+                var from_name = document.getElementById('name').value;
+                // var to_name = document.getElementById('to_name').value;
+                var message = document.getElementById('message').value;
+                var user_email = document.getElementById('email').value;
+                // send email using EmailJS
                 emailjs.sendForm('service_pqzz7y4', 'contact_form', this)
                     .then(function() {
                         console.log('SUCCESS!');
@@ -254,6 +259,7 @@
             });
         }
     </script>
+    
 </body>
 
 </html>
