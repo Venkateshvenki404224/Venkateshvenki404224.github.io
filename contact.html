@@ -140,7 +140,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                        <button class="btn btn-primary w-100 py-3" onclick="sendmail()" type="submit">Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -238,28 +238,6 @@
             emailjs.init("TQ2jVMY5wYOVSAowQ");
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // retrieve form field values and assign them to variables
-                var from_name = document.getElementById('name').value;
-                // var to_name = document.getElementById('to_name').value;
-                var message = document.getElementById('message').value;
-                var user_email = document.getElementById('email').value;
-                // send email using EmailJS
-                emailjs.sendForm('service_pqzz7y4', 'contact_form', this)
-                    .then(function() {
-                        alert('Your message has been sent!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-    
 </body>
 
 </html>
