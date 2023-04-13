@@ -106,4 +106,15 @@
     });
     
 })(jQuery);
+function sendmail(){
+	var params ={
+		from_name =document.getElementById("name").value,
+		email_id =document.getElementById("email_id").value,
+		message =document.getElementById("message").value,
+		subject =document.getElementById("subject").value
+	}
+	emailjs.send("service_pqzz7y4","contact_form",params).then(function (res) {
+ 		alert("Mail sent Successfully")
+	 })
+}
 
