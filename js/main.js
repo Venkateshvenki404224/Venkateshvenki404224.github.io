@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,14 +24,14 @@
             $('.navbar').removeClass('sticky-top shadow-sm');
         }
     });
-    
-    
+
+
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
     const $dropdownToggle = $(".dropdown-toggle");
     const $dropdownMenu = $(".dropdown-menu");
     const showClass = "show";
-    
+
     $(window).on("load resize", function() {
         if (this.matchMedia("(min-width: 992px)").matches) {
             $dropdown.hover(
@@ -52,8 +52,8 @@
             $dropdown.off("mouseenter mouseleave");
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -104,17 +104,5 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-    
-})(jQuery);
-function sendmail(){
-	var params ={
-		from_name =document.getElementById("name").value,
-		email_id =document.getElementById("email_id").value,
-		message =document.getElementById("message").value,
-		subject =document.getElementById("subject").value
-	}
-	emailjs.send("service_pqzz7y4","contact_form",params).then(function (res) {
- 		alert("Mail sent Successfully")
-	 })
-}
 
+})(jQuery);
