@@ -1,0 +1,28 @@
+# https://venkateshvenki404224.github.io/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /drafts/
+
+# Block AI scrapers that train on content without permission.
+# Remove any line below if you explicitly want that crawler to index you.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+Sitemap: https://venkateshvenki404224.github.io/sitemap.xml
